@@ -1,6 +1,6 @@
-# [Project name]
+# Éveil des Royaumes
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Un jeu de rôle médiéval 3D lumineux pour enfants, où chaque geste transforme un village et chaque aventurier peut éveiller un pouvoir.
 
 ## Run & Operate
 
@@ -22,23 +22,28 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/eveil-des-royaumes/src/App.tsx` — boucle de jeu locale, progression, pouvoirs, actions et scène interactive.
+- `artifacts/eveil-des-royaumes/src/index.css` — palette, profondeur isométrique, animations et responsive.
+- `artifacts/eveil-des-royaumes/vite.config.ts` — configuration Vite de l’application web.
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- La première version est locale et sans backend pour rendre la boucle de jeu jouable immédiatement.
+- La scène 3D est construite en CSS/HTML pour rester légère, lumineuse et compatible avec les appareils modestes.
+- Les actions sont pensées comme des jouets : changer d’outil, cliquer un élément, accueillir un personnage et construire font progresser le même chapitre.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Le joueur dirige un jeune royaume, récolte des ressources, construit un toit pour les nouveaux arrivants et choisit entre plusieurs voies : Maître de guilde, Nécromancien, Dieu Solaire et Tempest. Les niveaux ajoutent progressivement des objectifs et des contraintes.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Le jeu doit être lumineux, aventureux, médiéval et inspiré des anime, avec une grande liberté d’action.
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- Le gameplay actuel est volontairement en état local : recharger la page remet la partie à zéro.
+- Les touches `1` à `4` changent d’outil pendant que le focus n’est pas dans un champ de texte.
 
 ## Pointers
 

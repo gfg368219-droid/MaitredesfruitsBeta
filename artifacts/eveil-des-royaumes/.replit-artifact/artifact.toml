@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Éveil des Royaumes"
+description = "Un jeu de rôle médiéval 3D lumineux pour enfants, où les aventuriers éveillent des pouvoirs, explorent un village vivant et construisent leur propre royaume niveau après niveau."
+version = "1.0.0"
+id = "artifacts/eveil-des-royaumes"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19474
+
+[services.development]
+run = "pnpm --filter @workspace/eveil-des-royaumes run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/eveil-des-royaumes", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/eveil-des-royaumes/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19474"
+BASE_PATH = "/"
