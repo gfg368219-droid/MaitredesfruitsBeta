@@ -1,0 +1,1 @@
+- [WebGL preview fallback](webgl-preview-fallback.md) — this workspace preview may not expose WebGL; keep a playable non-WebGL mode when mounting Three.js scenes.
